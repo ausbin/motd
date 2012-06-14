@@ -1,0 +1,36 @@
+name: Motd
+main: com.thesupremenerd.Motd
+version: 0.1
+author: UncleNinja
+commands:
+  motd:
+    description: displays the message of the day (motd)
+    usage: "usage: /motd"
+    permission: motd.motd
+    permission-message: you don't have permission to call /motd (motd.motd)
+  setmotd:
+    description: sets the message of the day
+    usage: "usage: /setmotd the best serber eber"
+    permission: motd.setmotd
+    permission-message: you can't set the motd (motd.setmotd)
+  reloadmotd:
+    description: reloads config
+    permission: motd.reloadmotd
+    permission-message: you can't reload the config (motd.reloadmotd)
+permissions:
+  motd.*:
+    description: access to all motd-related commands
+    children:
+      motd.motd: true
+      motd.setmotd: true
+      motd.reloadmotd: true
+  motd.motd:
+    description: returns the current motd
+    default: true
+  motd.setmotd:
+    description: sets the motd
+    default: op
+  motd.reloadmotd:
+    description: reload configuration
+    default: op
+  

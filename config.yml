@@ -1,0 +1,4 @@
+# message of the day
+motd: a minecraft server
+# whether or not to save the motd to the config file after setting it
+autosave: true
